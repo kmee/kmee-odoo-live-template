@@ -345,10 +345,14 @@
         </context>
     </template>
     <template name="odoo_selection"
-              value="&quot;$field$ = fields.Selection(&#10;string=&quot;$field_name$&quot;, &#10;selection=[&#10;('', ''), ('', ''),&#10;], &#10;required=False,&#10;)"
+              value="$field$ = fields.Selection(&#10;string=&quot;$field_name$&quot;, &#10;selection=[&#10;('$key1$', '$value1$'),&#10;('$key2$', '$value2$'),&#10;], &#10;required=False,&#10;)"
               description="Add new field of type Selection" toReformat="true" toShortenFQNames="true">
         <variable name="field" expression="" defaultValue="" alwaysStopAt="true"/>
         <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="key1" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="value1" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="key2" expression="" defaultValue="" alwaysStopAt="true"/>
+        <variable name="value2" expression="" defaultValue="" alwaysStopAt="true"/>
         <context>
             <option name="Python" value="true"/>
         </context>
