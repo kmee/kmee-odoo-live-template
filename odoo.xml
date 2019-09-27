@@ -262,7 +262,8 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="odoo_selection" value="state = fields.Selection(&#10;string=&quot;$field_name$&quot;, &#10;selection=[&#10;('', ''), ('', ''),&#10;], &#10;required=False,&#10;)" description="Add new field of type Selection" toReformat="true" toShortenFQNames="true">
+  <template name="odoo_selection" value="&quot;$field$ = fields.Selection(&#10;string=&quot;$field_name$&quot;, &#10;selection=[&#10;('', ''), ('', ''),&#10;], &#10;required=False,&#10;)" description="Add new field of type Selection" toReformat="true" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
