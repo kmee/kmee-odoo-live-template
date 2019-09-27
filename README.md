@@ -7,6 +7,21 @@ This is a live template used and maintained by KMEE to incentivize the usage of 
 Feel free to ADD, FIX or define Issues and Pull Request
 
 
-# USAGE
+  # INSTALLATION
 
 To start using this live template simply place Odoo.xml in: ~/.PyCharm<your-version>/config/templates/Odoo.xml
+
+# USAGE
+
+Typing "odoosel" -> suggests "odoo_selection" -> TAB/ENTER ->
+
+"
+ = fields.Selection(
+        string="",
+        selection=[
+            ('', ''),
+            ('', ''),
+        ],
+        required=False,
+    )
+"
