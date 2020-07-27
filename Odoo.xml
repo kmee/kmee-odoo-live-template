@@ -155,9 +155,10 @@
     <variable name="res_model" expression="" defaultValue="" alwaysStopAt="true" />
     <context />
   </template>
-  <template name="odoo_xpath" value="&lt;xpath expr=&quot;//field[@name='$field_name$']&quot; position=&quot;$position$&quot;&gt;&#10;    &lt;!-- Add your fields or attributes here --&gt;&#10;&lt;/xpath&gt;" description="Add the structure of xpath" toReformat="true" toShortenFQNames="true">
+  <template name="odoo_xpath" value="&lt;xpath expr=&quot;//field[@name='$field_name$']&quot; position=&quot;$position$&quot;&gt;&#10;    $code$&#10;&lt;/xpath&gt;" description="Add the structure of xpath" toReformat="true" toShortenFQNames="true">
     <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="code" expression="" defaultValue="" alwaysStopAt="true" />
     <context />
   </template>
   <template name="odoo_xpath_attributes" value="&lt;xpath expr=&quot;//field[@name='$field_name$']&quot; position=&quot;$attributes$&quot;&gt;&#10;    &lt;attribute name=&quot;required&quot;&gt;1&lt;/attribute&gt;&#10;    &lt;attribute name=&quot;readonly&quot;&gt;1&lt;/attribute&gt;&#10;&lt;/xpath&gt;" description="Add the structure of xpath with attributes" toReformat="true" toShortenFQNames="true">
@@ -203,9 +204,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="for_r_self" value="for record in self:&#10;" description="Enumerated for" toReformat="true" toShortenFQNames="true">
-    <variable name="iter" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="group" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="for_r_self" value="for record in self:" description="Enumerated for" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
@@ -521,6 +520,58 @@
     <variable name="parent" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="odoo_csv_model_access_header" value="id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink" description="Add new CSV security header" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CSV" value="true" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="Django" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="PUPPET_FILE" value="false" />
+      <option name="Python" value="false" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="odoo_csv_model_access_line" value="access_$model_name$,access_$model_name$,model_$model_name$,$group_name$,$read$,$write$,$create$,$unlink$" description="Add new CSV security line" toReformat="false" toShortenFQNames="true">
+    <variable name="model_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="group_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="read" expression="" defaultValue="1" alwaysStopAt="true" />
+    <variable name="write" expression="" defaultValue="1" alwaysStopAt="true" />
+    <variable name="create" expression="" defaultValue="1" alwaysStopAt="true" />
+    <variable name="unlink" expression="" defaultValue="1" alwaysStopAt="true" />
+    <context>
+      <option name="Bash" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CSV" value="true" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="Django" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="PUPPET_FILE" value="false" />
+      <option name="Python" value="false" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="XML" value="false" />
     </context>
   </template>
 </templateSet>
